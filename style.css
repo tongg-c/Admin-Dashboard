@@ -55,21 +55,21 @@ body {
   display: grid;
   font-family: 'Roboto', sans-serif;
   font-size: calc(16px + 1vw);
-  grid-template-columns: minmax(250px, 2fr) minmax(400px, 10fr);
-  grid-template-rows: minmax(155px, 2fr) 10fr;
+  grid-template-columns: minmax(250px, 2fr) minmax(400px, 8fr);
+  grid-template-rows: minmax(100px, 1.75fr) minmax(600px, 8fr);
 }
 
 .dashboard-container {
   color: white;
   font-weight: 500;
-  font-size: calc(8px + .8vw);
+  font-size: calc(9px + .8vw);
   background-color: var(--c-blue);
   grid-row: span 2;
   padding-left: 1rem;
 }
 
 .dashboard-item-grouper {
-  margin: 1rem 0;
+  margin: 1.75rem 0;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -202,7 +202,7 @@ main h2 {
 }
 
 main h3 {
-  margin-bottom: .3rem;
+  margin-bottom: .2rem;
 }
 
 .project-card {
@@ -251,6 +251,8 @@ main h3 {
 .announcements {
   grid-area: announcement;
   margin-bottom: 1.5rem;
+  display: grid;
+  place-content: space-between
 }
 
 .announcements hr {
@@ -267,4 +269,21 @@ main h3 {
 .trending {
   grid-area: trending;
   margin-top: 1.5rem;
+  display: grid;
+  place-content: space-between;
 }
+
+.trending-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trending-group img {
+  width: 40px;
+}
+
+.trending-group h3 {
+  font-weight: normal;
+}
+
