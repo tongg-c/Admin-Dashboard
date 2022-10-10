@@ -56,7 +56,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: calc(16px + 1vw);
   grid-template-columns: minmax(235px, 2fr) minmax(400px, 8fr);
-  grid-template-rows: 145px minmax(600px, 8fr);
+  grid-template-rows: 160px minmax(600px, 8fr);
 }
 
 .dashboard-container {
