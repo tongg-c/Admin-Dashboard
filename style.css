@@ -55,8 +55,8 @@ body {
   display: grid;
   font-family: 'Roboto', sans-serif;
   font-size: calc(16px + 1vw);
-  grid-template-columns: minmax(250px, 2fr) minmax(400px, 8fr);
-  grid-template-rows: minmax(100px, 1.75fr) minmax(600px, 8fr);
+  grid-template-columns: minmax(235px, 2fr) minmax(400px, 8fr);
+  grid-template-rows: 145px minmax(600px, 8fr);
 }
 
 .dashboard-container {
@@ -98,7 +98,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   font-weight: 500;
-  
 }
 
 .searchbar-content{
@@ -185,8 +184,22 @@ main {
   'five five six six trending'
   'five five six six trending';
   gap: 1.2rem; 
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows:repeat(6, 1fr);
   position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    grid-template-areas: 
+    'one one announcement'
+    'two two announcement'
+    'three three trending'
+    'four four trending'
+    'five five .'
+    'six six .';
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 main h2, main h3 {
@@ -244,7 +257,7 @@ main h3 {
   background-color: white;
   border-radius: 5px;
   font-size: calc(6px + .6vw);
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
   position: relative;
 }
 
@@ -252,7 +265,7 @@ main h3 {
   grid-area: announcement;
   margin-bottom: 1.5rem;
   display: grid;
-  place-content: space-between
+  place-content: space-around;
 }
 
 .announcements hr {
@@ -270,7 +283,7 @@ main h3 {
   grid-area: trending;
   margin-top: 1.5rem;
   display: grid;
-  place-content: space-between;
+  place-content: space-around;
 }
 
 .trending-group {
